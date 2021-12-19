@@ -62,9 +62,9 @@ class transaksicontroller extends Controller
                 'hargabarang' => $ambil->hargabarang
             ];
         $this->transaksimodel->tambahdetail($data2);
+        } 
         session()->forget('cart');
       return redirect()->route('index')->with('success','Pembelian Berhasil!');
-        }  
     }
     function forgetcart(){
         session()->forget('cart');
